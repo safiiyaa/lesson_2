@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -6,6 +8,9 @@ public class Main {
         System.out.println(goToWalk(5, 0));
         System.out.println(goToWalk(65, 29));
         System.out.println(goToWalk(30, 32));
+//        generateRandomAge(1,100);
+        System.out.println("Можно ли идти гулять?");
+        System.out.println(goToWalk(generateRandomAge(1,100), 10));
     }
     public static String goToWalk (int age, double temperature ){
         String walk= "можно идти гулять";
@@ -26,5 +31,16 @@ public class Main {
         }
 
     }
+
+    public static int generateRandomAge(int min, int max){
+        Random r = new Random();
+
+        int result = r.nextInt(max-min) + min;
+
+        return result;
+
+    }
+
+
 
 }
